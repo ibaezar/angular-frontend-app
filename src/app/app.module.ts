@@ -7,13 +7,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ClientComponent } from './client/client.component';
 import { ClientService } from './client/client.service';
+import { FormComponent } from './client/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ClientComponent
+    ClientComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
