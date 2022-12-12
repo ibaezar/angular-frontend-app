@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ClientComponent } from './client/client.component';
 import { ClientService } from './client/client.service';
 import { FormComponent } from './client/form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormComponent } from './client/form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     ClientService
