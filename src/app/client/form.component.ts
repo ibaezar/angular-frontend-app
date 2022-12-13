@@ -46,4 +46,10 @@ export class FormComponent implements OnInit{
     );
   }
 
+  public update(){
+    this.clientService.update(this.client).subscribe(
+      response => Swal.fire('Cliente actualizado', `El cliente ${this.client.name} ha sido actualizado con éxito`, 'success')
+    );
+  }
+
 }

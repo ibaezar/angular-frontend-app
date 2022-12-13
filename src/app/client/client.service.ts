@@ -11,6 +11,7 @@ export class ClientService {
   private urlEndpoint: string = 'http://localhost:8080/api/clientes/listar';
   private urlEndpointCreateClient: string = 'http://localhost:8080/api/clientes/crear';
   private urlEndpointClientDetail: string = 'http://localhost:8080/api/clientes/detalle';
+  private urlEndpointClientEdit: string = 'http://localhost:8080/api/clientes/editar';
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
@@ -24,6 +25,10 @@ export class ClientService {
 
   create(client: Client): Observable<Client>{
     return this.http.post<Client>(this.urlEndpointCreateClient, client, {headers: this.httpHeaders});
+  }
+
+  update(client: Client): Observable<Client>{
+    return this.http.put<Client>(`${this.urlEndpointClientEdit}/${client.id}`, client, {headers: this.httpHeaders});
   }
 
   getClient(id: any): Observable<Client>{
