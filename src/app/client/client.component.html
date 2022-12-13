@@ -17,6 +17,7 @@
                     <th>Email</th>
                     <th>Fecha registro</th>
                     <th>Editar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,7 +27,8 @@
                     <td>{{ item.lastname }}</td>
                     <td>{{ item.email }}</td>
                     <td>{{ item.createdAt }}</td>
-                    <td><button class="btn btn-sm btn-primary" type="button" name="button" [routerLink]="['/clientes/form', item.id]">Editar</button></td>
+                    <td><button class="btn btn-sm btn-primary" type="button" name="editar" [routerLink]="['/clientes/form', item.id]">Editar</button></td>
+                    <td><button class="btn btn-sm btn-danger" type="button" name="eliminar" (click)="delete(item)">Eliminar</button></td>
                 </tr>
             </tbody>
           </table>

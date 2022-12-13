@@ -12,6 +12,7 @@ export class ClientService {
   private urlEndpointCreateClient: string = 'http://localhost:8080/api/clientes/crear';
   private urlEndpointClientDetail: string = 'http://localhost:8080/api/clientes/detalle';
   private urlEndpointClientEdit: string = 'http://localhost:8080/api/clientes/editar';
+  private urlEndpointClientDelete: string = 'http://localhost:8080/api/clientes/eliminar';
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
@@ -29,6 +30,10 @@ export class ClientService {
 
   update(client: Client): Observable<Client>{
     return this.http.put<Client>(`${this.urlEndpointClientEdit}/${client.id}`, client, {headers: this.httpHeaders});
+  }
+
+  delete(id: number): Observable<Client>{
+    return this.http.delete<Client>(`${this.urlEndpointClientDelete}/${id}`)
   }
 
   getClient(id: any): Observable<Client>{
