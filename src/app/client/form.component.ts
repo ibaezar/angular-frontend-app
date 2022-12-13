@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Client } from './client';
+import { ClientService } from './client.service';
 
 @Component({
   selector: 'app-form',
@@ -11,8 +13,15 @@ export class FormComponent {
   public subtitle: string = "Crear cliente";
   public client: Client = new Client();
 
+  constructor(
+    private clientService: ClientService,
+    private router: Router
+  ){}
+
   public create(): void {
-    console.log("Data Client", this.client);
+    this.clientService.create(this.client).subscribe(
+      response => this.router.navigate(['/clientes'])
+    );
   }
 
 }
