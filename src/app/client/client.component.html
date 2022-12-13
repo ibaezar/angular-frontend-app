@@ -4,7 +4,7 @@
     {{ title }}
   </div>
 
-  <div class="card border-primary mb-3">
+  <div class="card border-primary mb-3" *ngIf="clients.length>0">
     <div class="card-header">Clientes</div>
     <div class="card-body text-primary">
       <h5 class="card-title">Listado de clientes</h5>
@@ -38,4 +38,16 @@
       </div>
     </div>
   </div>
+
+  <div class="card" *ngIf="clients.length == 0">
+    <div class="card-header">
+      Clientes
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">¡Ops...! No existen clientes en la base de datos</h5>
+      <p class="card-text">Haz click en el siguiente botón para crear un nuevo cliente.</p>
+      <a href="#" class="btn btn-primary" routerLink="/clientes/form">Crear cliente</a>
+    </div>
+  </div>
+
 </div>
