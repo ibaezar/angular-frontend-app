@@ -7,7 +7,8 @@ import { Client } from './client';
 })
 export class FormComponent {
 
-  public title: string = "Crear cliente";
+  public title: string = "Formulario de clientes";
+  public subtitle: string = "Crear cliente";
   public client: Client = new Client();
 
   public create(): void {
