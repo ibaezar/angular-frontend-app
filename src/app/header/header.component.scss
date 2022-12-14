@@ -1,0 +1,17 @@
+#redes a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin-left: 10px;
+    transition: .2s;
+}
+
+#redes a:hover{
+    transform: scale(1.2);
+}
+
+@media screen and (max-width:850px) {
+    #redes{
+        display: none;
+    }
+}
