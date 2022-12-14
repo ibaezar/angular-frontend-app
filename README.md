@@ -1,27 +1,63 @@
-# AngularFrontendApp
+# Angular Frontend App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+Este proyecto fué desarrollado con [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
 
-## Development server
+Es un proyecto frontent, el cual consume datos de un Apirest desarrollado con Java y Springboot
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ¿Qué hace esta web?
+***
 
-## Code scaffolding
+Simplemente muestra la implementación de un CRUD, lo que, en palabras simples, sirve para obtener información desde una base de datos, poder crear nuevos registros, poder editarlos y también poder eliminarlos. Lo cual son las típicas funciones BASE de toda aplicación, ya sea Web, Escritorio o Mobile.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tecnologías principales usadas
+***
 
-## Build
+* Angular 15.0.2
+* Typescript
+* Bootstrap 4.5.3
+* Html 5
+* CSS 3
+* Seetalert2
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## ¿Como correr esta aplicación?
+***
 
-## Running unit tests
+En primer lugar, tenemos la opción de verla en funcionamiento desde el siguiente link: [Angular Frontend App]() 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Otra  opción es descargar este código o clonarlo con git para tenerlo de forma local en tu equipo.
 
-## Running end-to-end tests
+## Requisitos para poder hacer despliegue de esta aplicación en tu computador
+***
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Tener instalado y desplegado el Apirest al cual esta aplicación se conecta, remitase al link: [Backend Api rest](https://github.com/ibaezar/spring-boot-backend-apirest) para obtener mas información de esta parte del proyecto.
 
-## Further help
+Tener instalado en nuestro equipo las herramientas NodeJS, NPM y Angular.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Enlace a las herramientas necesarias.
+
+* [NodeJS](https://nodejs.org/en/)
+* [NPM](https://www.npmjs.com/)
+* [Angular](https://angular.io/cli)
+
+## Despliegue de la aplicación
+***
+
+Una vez ya tengamos nuestro backend desplegado y corriendo.
+
+Nos dirigimos a la raiz del proyecto Angular Frontend App desde CMD o cualquier otra consola según sea su Sistema Operativo.
+
+Una vez ubicados en la raíz ejecutamos el comando: `ng serve`, como se muestra en la siguiente imagen:
+![ng serve](src/assets/img/docu/1.png)
+
+Después de ejecutar dicho comando, en la consola aparecera algo parecido a lo siguiente:
+![app ready](src/assets/img/docu/2.png)
+
+Aquí podemos ver que la aplicación levanto en la ruta http://localhost:4200/ por lo cual la copiamos y la pegamos en nuestro navegador de preferencia y ya tendríamos la aplicación lista para usar y probar.
+
+## Contacto
+***
+
+* [Web](https://ibaezar.herokuapp.com/)
+* [Linkedin](https://www.linkedin.com/in/ibaezar/)
+* [Correo](mailto:ibaezar@outlook.com)
+* [Whatsapp](https://wa.me/56936330855)
