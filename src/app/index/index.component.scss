@@ -56,6 +56,13 @@
     padding: 10px;
     display: flex;
     align-items: center;
+    transition: 0.5s;
+}
+
+.technology:hover{
+    z-index: 10;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px #1a1a1a, -5px 0px 10px #1a1a1a;
 }
 
 .technology img{
@@ -68,4 +75,10 @@
     font-weight: bold;
     font-size: 25px;
     margin-left: 10px;
+}
+
+@media screen and (max-width:540px) {
+    .technology:hover{
+        transform: none !important;
+    }
 }

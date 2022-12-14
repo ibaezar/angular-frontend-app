@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class IndexComponent {
 
-  button: string = 'Ver código fuente ';
+  button: string = 'Ir al código fuente ';
+  linkCode: string = 'https://github.com/ibaezar/angular-frontend-app';
 
 }
