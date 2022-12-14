@@ -1,6 +1,6 @@
 # Angular Frontend App
 
-Este proyecto fue desarrollado con [Angular CLI](https://github.com/angular/angular-cli) versión 15.0.2.
+Este proyecto fue desarrollado con <a href="https://github.com/angular/angular-cli" target="_blank">Angular CLI</a> versión 15.0.2.
 
 Es un proyecto frontend, el cual consume datos de un Apirest desarrollado con Java y Springboot
 
@@ -22,22 +22,22 @@ Simplemente muestra la implementación de un CRUD, lo que, en palabras simples, 
 ## ¿Como correr esta aplicación?
 ***
 
-En primer lugar, tenemos la opción de verla en funcionamiento desde el siguiente link: [Angular Frontend App](){:target="_blank"}
+En primer lugar, tenemos la opción de verla en funcionamiento desde el siguiente link: <a href="" target="_blank">Angular Frontend App</a>
 
 Otra opción es descargar este código o clonarlo con git para tenerlo de forma local en tu equipo.
 
 ## Requisitos para poder hacer despliegue de esta aplicación en tu computador
 ***
 
-Tener instalado y desplegado el Apirest al cual esta aplicación se conecta, remítase al link: [Backend Api rest](https://github.com/ibaezar/spring-boot-backend-apirest){:target="_blank"} para obtener más información de esta parte del proyecto.
+Tener instalado y desplegado el Apirest al cual esta aplicación se conecta, remítase al link: <a href="https://github.com/ibaezar/spring-boot-backend-apirest" target="_blank">Backend Api rest</a> para obtener más información de esta parte del proyecto.
 
 Tener instalado en nuestro equipo las herramientas NodeJS, NPM y Angular.
 
 Enlace a las herramientas necesarias.
 
-* [NodeJS](https://nodejs.org/en/){:target="_blank"}
-* [NPM](https://www.npmjs.com/){:target="_blank"}
-* [Angular](https://angular.io/cli){:target="_blank"}
+* <a href="https://nodejs.org/en/" target="_blank">NodeJS</a>
+* <a href="https://www.npmjs.com/" target="_blank">NPM</a>
+* <a href="https://angular.io/cli" target="_blank">Angular</a>
 
 ## Despliegue de la aplicación
 ***
@@ -57,7 +57,7 @@ Aquí podemos ver que la aplicación levanto en la ruta http://localhost:4200/ p
 ## Contacto
 ***
 
-* [Web](https://ibaezar.herokuapp.com/){:target="_blank"}
-* [Linkedin](https://www.linkedin.com/in/ibaezar/){:target="_blank"}
+* <a href="https://ibaezar.herokuapp.com/" target="_blank">Web</a>
+* <a href="https://www.linkedin.com/in/ibaezar/" target="_blank">Linkedin</a>
 * [Correo](mailto:ibaezar@outlook.com)
-* [Whatsapp](https://wa.me/56936330855){:target="_blank"}
+* <a href="https://wa.me/56936330855" target="_blank">Whatsapp</a>
