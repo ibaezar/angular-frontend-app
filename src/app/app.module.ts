@@ -9,6 +9,7 @@ import { ClientComponent } from './client/client.component';
 import { ClientService } from './client/client.service';
 import { FormComponent } from './client/form.component';
 import { FormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     ClientComponent,
-    FormComponent
+    FormComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
