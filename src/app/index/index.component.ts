@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class IndexComponent {
 
+  button: string = 'Ver código fuente ';
+
 }
