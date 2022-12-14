@@ -11,6 +11,7 @@ import { FormComponent } from './client/form.component';
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { IndexComponent } from './index/index.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { IndexComponent } from './index/index.component';
     ClientComponent,
     FormComponent,
     PageNotFoundComponent,
-    IndexComponent
+    IndexComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
