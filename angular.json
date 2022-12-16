@@ -18,7 +18,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-              "lodash"
+              "lodash",
+              "sweetalert2"
             ],
             "outputPath": "dist/angular-frontend-app",
             "index": "src/index.html",
