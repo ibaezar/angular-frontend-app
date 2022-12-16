@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { IndexComponent } from './index/index.component';
 import { InfoComponent } from './info/info.component';
+import { Constants } from './utils/constants';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { InfoComponent } from './info/info.component';
     FormsModule
   ],
   providers: [
-    ClientService
+    ClientService,
+    Constants
   ],
   bootstrap: [AppComponent]
 })
