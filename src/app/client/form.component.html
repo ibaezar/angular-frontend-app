@@ -8,33 +8,48 @@
     <div class="card bg-dark text-white">
         <div class="card-header">{{ subtitle }}</div>
         <div class="card-body">
-            <form>
+            <form #clientForm="ngForm">
                 <div class="form-group row">
                     <label for="name" class="col-form-label col-sm-2">Nombre</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" [(ngModel)]="client.name" name="name">
+                        <input type="text" class="form-control" [(ngModel)]="client.name" name="name" required minlength="4" #name="ngModel" [ngClass]="{'is-invalid': (name.touched && name.invalid), 'is-valid': (name.touched && !name.invalid)}">
+                        <div style="margin-top: 5px" *ngIf="name.invalid && (name.dirty || name.touched)">
+                            <div class="text-danger" *ngIf="name.errors.required">El nombre es requerido</div>
+                            <div class="text-danger" *ngIf="name.errors.minlength">El nombre debe tener al menos 4 letras</div>
+                        </div>
+                        <div class="text-success" style="margin-top: 5px" *ngIf="(name.touched && !name.invalid)">Nombre ok!</div>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="lastname" class="col-form-label col-sm-2">Apellido</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" [(ngModel)]="client.lastname" name="lastname">
+                        <input type="text" class="form-control" [(ngModel)]="client.lastname" name="lastname" required minlength="4" #lastname="ngModel" [ngClass]="{'is-invalid': (lastname.touched && lastname.invalid), 'is-valid': (lastname.touched && !lastname.invalid)}">
+                        <div style="margin-top: 5px" *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)">
+                            <div class="text-danger" *ngIf="lastname.errors.required">El apellido es requerido</div>
+                            <div class="text-danger" *ngIf="lastname.errors.minlength">El apellido debe tener al menos 4 letras</div>
+                        </div>
+                        <div class="text-success" style="margin-top: 5px" *ngIf="(lastname.touched && !lastname.invalid)">Apellido ok!</div>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="email" class="col-form-label col-sm-2">Email</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" [(ngModel)]="client.email" name="email">
+                        <input type="email" class="form-control" [(ngModel)]="client.email" name="email" required #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [ngClass]="{'is-invalid': (email.touched && email.invalid), 'is-valid': (email.touched && !email.invalid)}">
+                        <div style="margin-top: 5px" *ngIf="email.invalid && (email.dirty || email.touched)">
+                            <div class="text-danger" *ngIf="email.errors.required">El correo es requerido</div>
+                            <div class="text-danger" *ngIf="email.errors.pattern">El correo tiene un formato incorrecto</div>
+                        </div>
+                        <div class="text-success" style="margin-top: 5px" *ngIf="(email.touched && !email.invalid)">Email ok!</div>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <div class="col-sm-6">
-                        <button class="btn btn-primary" role="button" (click)="create()" *ngIf="!client.id else elseBlock">Crear</button>
+                        <button class="btn btn-primary" role="button" (click)="create()" *ngIf="!client.id else elseBlock" [disabled]="!clientForm.form.valid">Crear</button>
                         <ng-template #elseBlock>
-                            <button class="btn btn-primary" role="button" (click)="update()">Editar</button>
+                            <button class="btn btn-primary" role="button" (click)="update()" [disabled]="!clientForm.form.valid">Editar</button>
                         </ng-template>
                     </div>
                 </div>
